@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sleep Debt Calculator</title>
+<style type="text/css">
+  body {
+  text-align: center;
+}
+.wrapper {
+  padding: 0 20%;
+}
+
+.box {
+  background-color: pink;
+
+}
+
+#result {
+  text-align: center;
+}
+#defaultIdealHours {
+  background-color: yellow;
+}
+
+</style>
+</head>
+<body>
+<nav>
+  <h1 class="animated fadeInDown"> Sleep Debt Calculator </h1>
+</nav>
+<div class="card-content">
+  <div id="ideal" class="ideal card center">
+    <h3 class="card-title">What is your ideal amount of sleep per day?
+    </h3>
+    <input id="defaultIdealHours" type="button" value="0">
+    <input type="button" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    <input type="button" value="4">
+    <input type="button" value="5">
+    <input type="button" value="6">
+    <input type="button" value="7">
+    <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    <ul>
+      <li>
+        <span id="ideal-hours">0</span> hours per day
+
+      </li>
+      <li>
+        <span id="ideal-hours-week">0</span> hours per week
+
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="wrapper">
+  <h4>What are the actual hours of sleep you get per day?
+    <span id="actual-hours"></span>
+  </h4>
+  <div class="box card">
+    <h5 class="card-title">Sunday:
+      <span class="hours" id="sunday-hours"></span>
+    </h5>
+    <div id="sunday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+      <input type="button" value="9">
+      <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Monday:
+      <span class="hours" id="monday-hours"></span>
+    </h5>
+    <div id="monday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Tuesday:
+      <span class="hours" id="tuesday-hours"></span>
+    </h5>
+    <div id="tuesday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Wednesday:
+      <span class="hours" id="wednesday-hours"></span>
+    </h5>
+    <div id="wednesday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Thursday:
+      <span class="hours" id="thursday-hours"></span>
+    </h5>
+    <div id="thursday" class="btnHours">
+
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Friday:
+      <span class="hours" id="friday-hours"></span>
+    </h5>
+    <div id="friday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+  <div class="box card">
+    <h5 class="card-title">Saturday:
+      <span class="hours" id="saturday-hours"></span>
+    </h5>
+    <div id="saturday" class="btnHours">
+      <input type="button" value="0">
+      <input type="button" value="1">
+      <input type="button" value="2">
+      <input type="button" value="3">
+      <input type="button" value="4">
+      <input type="button" value="5">
+      <input type="button" value="6">
+      <input type="button" value="7">
+      <input type="button" value="8">
+    <input type="button" value="9">
+    <input type="button" value="10">
+    </div>
+  </div>
+</div>
+<div id="calculate">
+  <h2 id="result">
+    </h5>
+    <input id="cal" type="button" value="Calculate">
+</div>
+<script type="text/javascript">
+  const inputs = Array.from(document.getElementsByTagName("input"));
+const actualHours = Array.from(document.getElementsByClassName("hours"));
+const result = document.getElementById("result");
+
+const clearBtns = function(box) {
+  Array.from(
+    document.getElementById(box).getElementsByTagName("input")
+  ).forEach(input => (input.style.backgroundColor = "#fff"));
+};
+const handleInput = function(e) {
+  result.className = "animated zoomOutDown";
+
+  clearBtns(e.target.parentElement.id);
+  switch (e.target.parentElement.id) {
+    case "ideal":
+      document.getElementById("ideal-hours").textContent = e.target.value;
+      document.getElementById("ideal-hours-week").textContent =
+        e.target.value * 7;
+
+      e.target.style.backgroundColor = "yellow";
+      break;
+    case "sunday":
+      document.getElementById("sunday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "monday":
+      document.getElementById("monday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "tuesday":
+      document.getElementById("tuesday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "wednesday":
+      document.getElementById("wednesday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "thursday":
+      document.getElementById("thursday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "friday":
+      document.getElementById("friday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+
+      break;
+    case "saturday":
+      document.getElementById("saturday-hours").textContent = e.target.value;
+      e.target.style.backgroundColor = "yellow";
+      break;
+    case "calculate":
+      let actualSleepHours = [];
+      let idealSleepHours = Number(
+        document.getElementById("ideal-hours-week").textContent
+      );
+      actualHours.map(item => actualSleepHours.push(Number(item.textContent)));
+      actualSleepHours = actualSleepHours.reduce((a, b) => a + b);
+      if (actualSleepHours == idealSleepHours) {
+        result.textContent = "You got the perfect amount of sleep!";
+      } else if (actualSleepHours > idealSleepHours) {
+        result.textContent = `You are ${actualSleepHours -
+          idealSleepHours} hours over your sleep goal`;
+        result.textContent = "You got more sleep than needed!";
+      } else if (actualSleepHours < idealSleepHours) {
+        result.textContent = `You are ${idealSleepHours -
+          actualSleepHours} hours over your sleep goal`;
+        result.textContent = "You should get some more rest!";
+      } else {
+        alert("ERROR. Something went wrong");
+      }
+      result.className = "animated zoomInUp";
+  }
+};
+for (let item in inputs) {
+  inputs[item].addEventListener("click", handleInput);
+}
+
+</script>
+</body>
+</html>
